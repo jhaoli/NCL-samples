@@ -279,6 +279,7 @@ begin
   wavelength  = new((/trunc_num/), typeof(u))
   wavelength = 2 * pi * rad * 1.0e-3 / ispan(1, trunc_num, 1)
 
+  divspec = new((/trunc_num+1/), typeof(u))
   vrtspec = new((/trunc_num+1/), typeof(u))
 
   calc_energy_spectrum(rad, u, v, divspec, vrtspec, True)
